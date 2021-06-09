@@ -2,6 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 
+const config = require('./config');
+
 const app = express();
 
 app.use(cors());
@@ -13,6 +15,6 @@ app.get("/", async(req,res) =>{
     res.status(200).json({Pika:"chu"});
 });
 
-app.listen(4321,()=>{
-    console.log('Api Listening on 4321')
+app.listen(config.port,()=>{
+    console.log(`Api Listening on ${config.port}`)
 });
