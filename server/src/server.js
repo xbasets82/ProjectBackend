@@ -6,8 +6,7 @@ const morgan = require("morgan");
 
 const config = require("./config");
 const db = require("./db");
-
-const typeController = require("./entities/types/type.controller");
+const typeRouter = require("./entities/types/type.router");
 
 const app = express();
 
@@ -15,8 +14,8 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
-app.get("/types", typeController.getAll);
-app.post("/types", typeController.addOne);
+app.use("/types", typeRouter);
+
 
 const startServer = async () => {
   try {
