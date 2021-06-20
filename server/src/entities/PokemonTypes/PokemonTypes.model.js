@@ -17,17 +17,16 @@ const typeSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    evolutionPokemonTypeID:{
-        type: mongoose.SchemaTypes.ObjectId,
-        ref:"pokemonType",
-        required: false,
-    },    
-    generationID:{
-        type: mongoose.SchemaTypes.ObjectId,
-        ref:"generation",
-        required: false,
+    evolutionPokemonTypeID: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "pokemonType",
+      required: false,
     },
-    
+    generationID: {
+      type: mongoose.SchemaTypes.ObjectId,
+      ref: "generation",
+      required: false,
+    },
   },
   {
     timestamps: true,
