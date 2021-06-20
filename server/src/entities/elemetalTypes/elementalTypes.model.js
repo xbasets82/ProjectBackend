@@ -12,6 +12,6 @@ const typeSchema = new mongoose.Schema({
     timestamps:true,
 });
 
-const Type = mongoose.model("type", typeSchema);
+const elementalType = mongoose.model("elementalType", typeSchema);
 
-module.exports = Type;
+module.exports = elementalType;

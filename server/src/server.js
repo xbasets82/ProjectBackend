@@ -6,7 +6,11 @@ const morgan = require("morgan");
 
 const config = require("./config");
 const db = require("./db");
-const typeRouter = require("./entities/types/type.router");
+
+const elementalTypesRouter = require("./entities/elemetalTypes/elementalTypes.router");
+const pokemonTypesRouter = require("./entities/PokemonTypes/PokemonTypes.router");
+const generationsRouter = require("./entities/generations/generations.router");
+
 
 const app = express();
 
@@ -14,7 +18,9 @@ app.use(cors());
 app.use(express.json());
 app.use(morgan("dev"));
 
-app.use("/types", typeRouter);
+app.use("/api/elementalTypes", elementalTypesRouter);
+app.use("/api/pokemonTypes", pokemonTypesRouter);
+app.use("/api/generations", generationsRouter);
 
 
 const startServer = async () => {
