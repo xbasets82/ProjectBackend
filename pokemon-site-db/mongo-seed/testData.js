@@ -31,9 +31,9 @@ var pokemontype =
         name:"Charizard",
         code: 6,
         createdAt: ISODate(),
-        updatedAt: ISODate(),
-        elementalTypeID :`${elementaltypeID.insertedId}`,
-        generationID :`${generationID.insertedId}`,
+        updatedAt: ISODate(),        
+        elementalTypeID :new ObjectId(`${elementaltypeID.insertedId.valueOf()}`),
+        generationID :new ObjectId(`${generationID.insertedId.valueOf()}`),
         evolutionPokemonTypeID:null,
 
     }; 
@@ -46,9 +46,9 @@ var pokemontype =
         code: 5,
         createdAt: ISODate(),
         updatedAt: ISODate(),
-        elementalTypeID :`${elementaltypeID.insertedId}`,
-        generationID :`${generationID.insertedId}`,
-        evolutionPokemonTypeID:`${pokemonID.insertedId}`,
+        elementalTypeID :new ObjectId(`${elementaltypeID.insertedId.valueOf()}`),
+        generationID :new ObjectId(`${generationID.insertedId.valueOf()}`),
+        evolutionPokemonTypeID:new ObjectId(`${pokemonID.insertedId.valueOf()}`),
     }; 
     pokemonID = db.pokemontypes.insertOne(pokemontype);
 
@@ -58,9 +58,9 @@ var pokemontype =
         code: 4,
         createdAt: ISODate(),
         updatedAt: ISODate(),
-        elementalTypeID :`${elementaltypeID.insertedId}`,
-        generationID :`${generationID.insertedId}`,
-        evolutionPokemonTypeID:`${pokemonID.insertedId}`,
+        elementalTypeID :new ObjectId(`${elementaltypeID.insertedId.valueOf()}`),
+        generationID :new ObjectId(`${generationID.insertedId.valueOf()}`),
+        evolutionPokemonTypeID:new ObjectId(`${pokemonID.insertedId.valueOf()}`),
     }; 
     pokemonID = db.pokemontypes.insertOne(pokemontype);
 
@@ -84,8 +84,8 @@ var pokemontype =
         code: 3,
         createdAt: ISODate(),
         updatedAt: ISODate(),
-        elementalTypeID :`${elementaltypeID.insertedId}`,
-        generationID :`${generationID.insertedId}`,
+        elementalTypeID :new ObjectId(`${elementaltypeID.insertedId.valueOf()}`),
+        generationID :new ObjectId(`${generationID.insertedId.valueOf()}`),
         evolutionPokemonTypeID:null,
 
     }; 
@@ -98,9 +98,9 @@ var pokemontype =
         code: 2,
         createdAt: ISODate(),
         updatedAt: ISODate(),
-        elementalTypeID :`${elementaltypeID.insertedId}`,
-        generationID :`${generationID.insertedId}`,
-        evolutionPokemonTypeID:`${pokemonID.insertedId}`,
+        elementalTypeID :new ObjectId(`${elementaltypeID.insertedId.valueOf()}`),
+        generationID :new ObjectId(`${generationID.insertedId.valueOf()}`),
+        evolutionPokemonTypeID:new ObjectId(`${pokemonID.insertedId.valueOf()}`),
     }; 
     pokemonID = db.pokemontypes.insertOne(pokemontype);
 
@@ -110,8 +110,8 @@ var pokemontype =
         code: 3,
         createdAt: ISODate(),
         updatedAt: ISODate(),
-        elementalTypeID :`${elementaltypeID.insertedId}`,
-        generationID :`${generationID.insertedId}`,
-        evolutionPokemonTypeID:`${pokemonID.insertedId}`,
+        elementalTypeID :new ObjectId(`${elementaltypeID.insertedId.valueOf()}`),
+        generationID :new ObjectId(`${generationID.insertedId.valueOf()}`),
+        evolutionPokemonTypeID:new ObjectId(`${pokemonID.insertedId.valueOf()}`),
     }; 
     pokemonID = db.pokemontypes.insertOne(pokemontype);

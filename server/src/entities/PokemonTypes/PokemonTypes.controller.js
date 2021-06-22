@@ -10,6 +10,27 @@ const getAll = async (req, res) => {
       res.status(500).end();
     }
   };
+
+  const elementalTypeGetAll = async(req, res) =>{
+    try{
+      const docs = await PokemonType.find({elementalTypeID : req.params.id}).lean().exec();
+      res.status(200).json({data: docs});
+    }catch(e){
+      console.error(e);
+      res.status(500).end();
+    }
+  }
+
+  const generationGetAll = async(req, res) =>{
+    try{
+      const docs = await PokemonType.find({generationID : req.params.id}).lean().exec();
+      res.status(200).json({data: docs});
+    }catch(e){
+      console.error(e);
+      res.status(500).end();
+    }
+  }
+
   
   const getOne = async (req, res) => {
     try {
@@ -46,6 +67,19 @@ const getAll = async (req, res) => {
       res.status(400).end();
     }
   };
+
+  const elementalTypeAddOne = async (req, res) =>{
+    try {
+      const doc = await PokemonType.create({
+        elementaltypeID : req.params.elementalTypeID,
+        ...req.body,
+      });
+      res.status(201).json({ data: doc });
+    } catch (e) {
+      console.error(e);
+      res.status(400).end();
+    }
+  };
   
   const updateOne = async (req, res) => {
     try {
@@ -72,4 +106,7 @@ const getAll = async (req, res) => {
     getOne,
     updateOne,
     removeOne,
+    elementalTypeGetAll,
+    generationGetAll,
+    elementalTypeAddOne,
   }; 
